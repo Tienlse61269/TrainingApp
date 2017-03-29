@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="card">
+        <form class="form-horizontal">
+            <div class="form-group" style="padding-left: 50px">
+                <label class="control-label" for="name" style="font-size: 18px; padding-top: 14px">Name</label>
+                <div class="">
+                    <input class="" ng-model="module.name" type="text" placeholder="Name"/>
+                </div>
+                <label class="control-label" for="name" style="font-size: 18px; padding-top: 14px">Class</label>
+                <div class="">
+                    <input class="" ng-model="module.classModel.total" type="number" placeholder="Total" required style="width: 100px"/>
+                    <input class="" ng-model="module.classModel.running" type="number" placeholder="Running" required style="width: 100px"/>
+                    <input class="" ng-model="module.classModel.release" type="number" placeholder="Release" required style="width: 100px"/>
+                </div>
+                <label class="control-label" for="name" style="font-size: 18px; padding-top: 14px">Resource</label>
+                <div class="">
+                    <input class="" ng-model="module.personModel.total" type="number" placeholder="Total" required style="width: 100px"/>
+                    <input class="" ng-model="module.personModel.running" type="number" placeholder="Running" required style="width: 100px"/>
+                    <input class="" ng-model="module.personModel.release" type="number" placeholder="Release" required style="width: 100px"/>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2">
+                        <button type="button" class="btn btn-success" ng-click="saveModule()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+        
+

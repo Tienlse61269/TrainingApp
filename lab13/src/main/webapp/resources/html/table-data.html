@@ -1,0 +1,71 @@
+<pagination ng-show="tours.length != 0" style="margin: auto;"
+            ng-model="currentPage" total-items="tours.length" max-size="maxSize"  
+            boundary-links="true" items-per-page="numPerPage" class="pagination-small" 
+            previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;">
+</pagination>
+<section id="content">
+    <div class="container">
+        <div ng-repeat="tour in filteredTodos" class="col-sm-4">
+            <div class="card" style="height: 70%">
+                <div class="card-header" style="height: 20%">
+                    <h2>{{tour.title}}
+                        <div style="position: absolute">
+                            <small>{{tour.duration}} 
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                                Giá: {{tour.price}} VND
+                            </small> 
+                        </div>
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <ul class="tab-nav tn-justified tn-icon" role="tablist">
+                        <li role="presentation" class="active">
+                            <a class="col-sx-4" href="#1{{tour.id}}" aria-controls="tab-1" role="tab" data-toggle="tab">
+                                <i class="md md-home icon-tab"></i>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a ng-click="loadMap(tour.id)" class="col-xs-4" href="#2{{tour.id}}" aria-controls="tab-2" role="tab" data-toggle="tab">
+                                <i class="md md-room icon-tab"></i>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a class="col-xs-4" href="#3{{tour.id}}" aria-controls="tab-3" role="tab" data-toggle="tab">
+                                <i class="md md-star icon-tab"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-20">
+                        <div role="tabpanel" class="tab-pane animated fadeIn in active" id="1{{tour.id}}">
+                            <img style="width: 100%; height:52%" src="{{tour.image}}" class="img-responsive m-b-15" alt="">
+                        </div>
+                        <div role="tabpanel" class="tab-pane animated fadeIn" id="2{{tour.id}}">
+                            <div class="googleMap" id="map{{tour.id}}"></div>
+                            <label class="fixedcontent">
+                                Lịch trình: {{tour.schedule}}
+                            </label>
+                            <label>
+                                Chi tiết: <a href="{{tour.link}}">{{tour.link}}</a>
+                            </label>
+                        </div>
+                        <div role="tabpanel" class="tab-pane animated fadeIn item" id="3{{tour.id}}">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}" alt="">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}">
+                            <img class="megaImage img-responsive m-5" alt=""src="{{tour.image}}">
+                            <div>Nguồn: {{tour.source}}</div>
+                        </div>
+                        <input class="btn btn-block btn-info btn-lg p-l " ng-click="bookTour(tour)" value="Đặt Tour">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<pagination ng-show="tours.length != 0" style="margin: auto;"
+            ng-model="currentPage" total-items="tours.length" max-size="maxSize"  
+            boundary-links="true" items-per-page="numPerPage" class="pagination-small p-b-30" 
+            previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;">
+</pagination>

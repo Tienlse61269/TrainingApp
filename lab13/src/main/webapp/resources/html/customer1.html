@@ -1,0 +1,71 @@
+<div class="process">
+    <div class="process_icon active">
+        <img src="resources/image/icon/icon_chontour.png" alt="">
+        <div class="title">Chọn tour</div>
+    </div>
+    <div class="process_arrow">
+        <img src="resources/image/icon/icon_done.png" alt="">
+    </div>
+    <div class="process_icon active">
+        <img src="resources/image/icon/icon_thongtin.png" alt="">
+        <div class="title">Thông tin</div>
+    </div>
+    <div class="process_arrow"></div>
+    <div class="process_icon">
+        <img src="resources/image/icon/icon_thanhtoan.png" alt="">
+        <div class="title">Thanh toán</div>
+    </div>
+    <div class="process_arrow"></div>
+    <div class="process_icon">
+        <img src="resources/image/icon/icon_hoantat.png" alt="">
+        <div class="title">Hoàn tất</div>
+    </div>
+</div>
+<div class="row" style="padding-top: 250px">
+    <h1>Thông Tin</h1>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>Tên:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="customer.name"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>Địa chỉ:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="customer.address"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>Số điện thoại:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" ng-model="customer.phone_number"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>Số lượng:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="number" class="form-control" ng-model="customer.quantity"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <label>Ghi chú:</label>
+        </div>
+        <div class="col-sm-9">
+            <input type="text" class="form-control"  rows="3" ng-model="customer.comment"/>
+        </div>
+    </div>
+   <div class="row">
+        <div class="col-sm-12">
+            <input type="button" class="form-control" style="width:100px;"  rows="3" ng-click="continue()" value="Continue"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="col-md-6 col-md-offset-3" ng-show="!register">
+    <h2>Đăng ký</h2>
+        <div class="form-group" >
+            <label
+                >Tài khoản</label>
+            <input type="text"  class="form-control" ng-model="account.username" required />
+            <span  class="help-block">Phải được nhập</span>
+        </div>
+        <div class="form-group">
+            <label>Mật khẩu</label>
+            <input type="password" class="form-control" ng-model="account.password" required />
+            <span  class="help-block">Phải được nhập</span>
+        </div>
+        <div class="form-group" >
+            <label>Tên đầy đủ</label>
+            <input type="text"  class="form-control" ng-model="account.fullname" required />
+            <span  class="help-block">Phải được nhập</span>
+        </div>
+        <div class="form-group">
+            <label>Địa chỉ</label>
+            <input type="text" class="form-control" ng-model="account.address" required />
+            <span  class="help-block">Phải được nhập</span>
+        </div>
+        <div class="form-group" >
+            <label>Số điện thoại</label>
+            <input type="text" class="form-control" ng-model="account.phone_number" required />
+            <span  class="help-block">Phải được nhập</span>
+        </div>
+        <div class="form-group">
+            <span  class="help-block">{{response}}</span>
+        </div>
+        <div class="form-actions">
+            <input type="button" class="btn btn-primary" ng-click="signUp()" value="Đăng nhập"/>
+            <a href="#/home" class="btn btn-link">Quay lại!</a>
+        </div>
+</div>
+<div class="col-md-6 col-md-offset-3" ng-show="register">
+    <h2>Bạn đã đăng ký thành công!</h2>
+       
+        <div class="form-actions">
+            <a href="#/home" class="btn btn-link">Nhấn để về trang chủ.</a>
+        </div>
+</div>

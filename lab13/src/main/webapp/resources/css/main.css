@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 8, 2017, 10:52:04 PM
+    Author     : Po
+*/
+.process .process_icon img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    opacity: .5;
+    height: auto;
+    min-height: 0;
+}
+.process .process_icon.active img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    opacity: 1;
+}
+.fa {
+    padding-right: 5px;
+}
+nav.navbar {
+    background: #0bd6ef;		
+}
+nav.navbar .navbar-right li a {
+    color: #fff;
+}
+div.navbar-header a.navbar-brand {
+    padding: 5px 10px;
+}
+a.navbar-brand img {
+    transition: all 0.2s ease;
+    -webkit-filter: brightness(100%);			
+}
+a.navbar-brand img:hover {
+    -webkit-filter: brightness(120%);
+}
+.process {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 100;
+    left: 0;
+    padding-top: 40px;
+}
+.process .process_icon{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.process .process_arrow{
+    display: inline-block;
+    width: 120px;
+    background: url(../image/icon/icon_muiten.png) center no-repeat;
+    height: 128px;
+    vertical-align: top;
+}
+.googleMap {
+    height: 40%;
+    width: 100%;
+    position: fixed;
+}
+.megaImage:hover  {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.background-home{
+    background-image: url('/resources/image/background.jpg');
+    padding:30px;
+}
+.fixedcontent{
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.megaImage{
+    width: 29%; 
+    height: 30%; 
+    position: relative;
+    float: left;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.titleTab
+{
+    padding-left: 15px;
+    border-bottom: 3px solid #BFC9CA;
+}
+.tab_container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 0px;
+    position: relative;
+    height: 520px;
+    margin-left:10px;
+}
+
+.inputTab {
+    clear: both;
+    padding-top: 10px;
+    display: none;
+}
+.sectionTab
+{
+    clear: both;
+    padding-top: 10px;
+    display: none;
+}
+.tabLabel {
+    font-weight:500;
+    font-size: 16px;
+    display: block;
+    float: left;
+    width: 18%;
+    padding: 10px;
+    color: #757575;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: #f0f0f0;
+    /*   margin-right: 20px; */
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+    display: block;
+    padding: 20px;
+    background: #fff;
+    color: #999;
+    border-bottom: 2px solid #f0f0f0;
+}
+.tab_container [id^="tab"]:checked + label {
+    background: 	#F5F5F5;
+    box-shadow: inset 0 -3px #0CE;
+}
+
+.tab_container [id^="tab"]:checked + label .fa {
+    color: #0CE;
+}
